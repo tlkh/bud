@@ -4,33 +4,38 @@
 #include "images.h"
 
 SSD1306  display(0x3c, D2, D1);
-SSD1306  display2(0x3c, D4, D3);
 
-OLEDDisplayUi ui     ( &display );
+OLEDDisplayUi ui     (&display);
 
 void drawFrame1(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
   ui.disableIndicator();
-  display->drawXbm(0, 0, 128, 64, bud_neutral);
-  ui.disableIndicator();
+  display->drawXbm(26, 10, 75, 43, bud_neutral);
+  display->setTextAlignment(TEXT_ALIGN_CENTER);
+  display->setFont(ArialMT_Plain_10);
+  display->drawString(64, 50, "yes no maybe so");
 }
 
 void drawFrame2(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
-  display->drawXbm(0, 0, 128, 64, bud_happy);
   ui.disableIndicator();
+  display->drawXbm(26, 10, 75, 43, bud_happy);
+  display->drawString(64, 50, "nothing to complain about");
+  
 }
 
 void drawFrame3(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
-  display->drawXbm(0, 0, 128, 64, bud_sad);
   ui.disableIndicator();
+  display->drawXbm(26, 10, 75, 43, bud_sad);
+  display->drawString(64, 50, "keep ignoring me fine");
+  
 }
 
 void drawFrame4(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
-  display->drawXbm(0, 0, 128, 64, bud_dead);
   ui.disableIndicator();
+  display->drawXbm(26, 10, 75, 43, bud_dead);
+  display->drawString(64, 50, "goodbye my 'friend'");
+  
 }
 
-// This array keeps function pointers to all frames
-// frames are the single views that slide in
 FrameCallback frames[] = { drawFrame1, drawFrame2, drawFrame3, drawFrame4};
 
 // how many frames are there?
@@ -41,7 +46,7 @@ void setup() {
   Serial.println();
   ui.setTargetFPS(30);
   ui.setFrames(frames, frameCount);
-  ui.setTimePerFrame(1);
+  ui.setTimePerFrame(2000);
   ui.setTimePerTransition(0);
 
   ui.init();
