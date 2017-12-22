@@ -14,20 +14,23 @@ dead = 3;
 
 long last_millis();
 
+const byte img_width = (64-img_width)/25;
+const byte img_height = 60;
+
 void drawFrame1(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
   ui.disableIndicator();
   switch (state) {
   case happy:
-    display->drawXbm(26, 10, 75, 43, bud_happy_1);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, happy_1);
     break;
   case sad:
-    display->drawXbm(26, 10, 75, 43, bud_sad_1);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, sad_1);
     break;
     case dead:
-    display->drawXbm(26, 10, 75, 43, bud_dead_1);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, dead_1);
     break;
   default:
-    display->drawXbm(26, 10, 75, 43, bud_neutral_1);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, neutral_1);
   }
 }
 
@@ -35,16 +38,16 @@ void drawFrame2(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int1
   ui.disableIndicator();
   switch (state) {
   case happy:
-    display->drawXbm(26, 10, 75, 43, bud_happy_2);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, happy_2);
     break;
   case sad:
-    display->drawXbm(26, 10, 75, 43, bud_sad_2);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, sad_2);
     break;
     case dead:
-    display->drawXbm(26, 10, 75, 43, bud_dead_2);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, dead_2);
     break;
   default:
-    display->drawXbm(26, 10, 75, 43, bud_neutral_2);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, neutral_2);
   }
   
 }
@@ -53,16 +56,16 @@ void drawFrame3(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int1
   ui.disableIndicator();
   switch (state) {
   case happy:
-    display->drawXbm(26, 10, 75, 43, bud_happy_3);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, happy_3);
     break;
   case sad:
-    display->drawXbm(26, 10, 75, 43, bud_sad_3);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, sad_3);
     break;
     case dead:
-    display->drawXbm(26, 10, 75, 43, bud_dead_3);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, dead_3);
     break;
   default:
-    display->drawXbm(26, 10, 75, 43, bud_neutral_3);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, neutral_3);
   }
   
 }
@@ -71,16 +74,16 @@ void drawFrame4(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int1
   ui.disableIndicator();
   switch (state) {
   case happy:
-    display->drawXbm(26, 10, 75, 43, bud_happy_4);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, happy_4);
     break;
   case sad:
-    display->drawXbm(26, 10, 75, 43, bud_sad_4);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, sad_4);
     break;
     case dead:
-    display->drawXbm(26, 10, 75, 43, bud_dead_4);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, dead_4);
     break;
   default:
-    display->drawXbm(26, 10, 75, 43, bud_neutral_4);
+    display->drawXbm((128-img_width)/2, (64-img_width)/2, img_width, img_height, neutral_4);
   }
   
 }
