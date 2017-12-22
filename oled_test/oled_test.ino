@@ -113,7 +113,7 @@ void loop() {
         state = 0
       }
     }
-    delay(remainingTimeBudget);
+    delay(remainingTimeBudget/2);
   }
   last_millis = millis()
 }
