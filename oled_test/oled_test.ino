@@ -14,8 +14,8 @@ byte sensorValue;
 
 unsigned long last_millis = 0;
 
-const byte img_width = 105;
-const byte img_height = 60;
+const byte img_width = 128;
+const byte img_height = 64;
 
 const char* ssid = "SUTD_ILP2";
 const char* password = "sutd-acce55";
@@ -96,48 +96,48 @@ void reconnect() {
 void drawFrame1(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
   ui.disableIndicator();
   if (bud_state == 1) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, happy_1);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, overwatered1);
   }
   if (bud_state == 2) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, sad_1);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, sad1);
   }
   if (bud_state == 3) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, dead_1);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, water1);
   }
   if (bud_state == 0) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, neutral_1);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, happy1);
   }
 }
 
 void drawFrame2(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
   ui.disableIndicator();
   if (bud_state == 1) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, happy_2);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, overwatered2);
   }
   if (bud_state == 2) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, sad_2);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, sad2);
   }
   if (bud_state == 3) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, dead_2);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, water2);
   }
   if (bud_state == 0) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, neutral_2);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, happy2);
   }
 }
 
 void drawFrame3(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
   ui.disableIndicator();
   if (bud_state == 1) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, happy_3);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, overwatered3);
   }
   if (bud_state == 2) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, sad_3);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, sad3);
   }
   if (bud_state == 3) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, dead_3);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, water3);
   }
   if (bud_state == 0) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, neutral_3);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, happy3);
   }
 
 }
@@ -145,16 +145,16 @@ void drawFrame3(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int1
 void drawFrame4(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
   ui.disableIndicator();
   if (bud_state == 1) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, happy_4);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, overwatered4);
   }
   if (bud_state == 2) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, sad_4);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, sad4);
   }
   if (bud_state == 3) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, dead_4);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, water4);
   }
   if (bud_state == 0) {
-    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, neutral_4);
+    display->drawXbm((128 - img_width) / 2, (64 - img_height) / 2, img_width, img_height, happy4);
   }
 }
 
@@ -180,9 +180,9 @@ void setup() {
   setup_wifi();
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
-  
+
   display.clear();
-  
+
   ui.setTargetFPS(30);
   ui.setFrames(frames, frameCount);
   ui.setTimePerFrame(200);
@@ -201,7 +201,7 @@ void loop() {
   unsigned long currentMillis = millis();
   rawValue = analogRead(A0);
   Serial.println(rawValue);
-  sensorValue = map(rawValue, 1000, 300, 0, 100);
+  sensorValue = map(rawValue, 1023, 0, 0, 100);
   int remainingTimeBudget = ui.update();
 
   if (remainingTimeBudget > 0) {
@@ -217,12 +217,22 @@ void loop() {
       client.publish("outTopic", msg);
     }
 
-    if ( (sensorValue > 50) || (sensorValue < 10) ) {
-      bud_state = 3;
-    } else {
-      bud_state = 1;
-    }
+    if (sensorValue < 20) {
 
-    delay(remainingTimeBudget / 4);
+      bud_state = 2;
+
+  } else {
+    if ( (sensorValue > 65)) {
+        bud_state = 1;
+      } else {
+
+        if ( (sensorValue > 52)) {
+          bud_state = 3;
+        } else {
+
+          bud_state = 0;
+        }
+      }
+    }
   }
 }
