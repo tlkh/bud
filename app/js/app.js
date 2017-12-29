@@ -13,7 +13,7 @@ client.on('message', function (topic, message) {
   // message is Buffer
   console.log(message.toString())
   plant1water.innerHTML = message.toString() + "%"
-  plant2water.innerHTML = message.toString() + "%"
+  plant2water.innerHTML = (message/2).toString() + "%"
 })
 },{"mqtt":16}],2:[function(require,module,exports){
 (function (Buffer){

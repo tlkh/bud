@@ -201,7 +201,7 @@ void loop() {
   unsigned long currentMillis = millis();
   rawValue = analogRead(A0);
   Serial.println(rawValue);
-  sensorValue = map(rawValue, 1000, 500, 0, 100);
+  sensorValue = map(rawValue, 1000, 300, 0, 100);
   int remainingTimeBudget = ui.update();
 
   if (remainingTimeBudget > 0) {
